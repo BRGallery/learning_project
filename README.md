@@ -4,7 +4,7 @@ This is a [T3 Stack](https://create.t3.gg/) project bootstrapped with `create-t3
 
 ## TODO
 
-- [ ] Make it deploy (vercel)
+- [x] Make it deploy (vercel)
 - [ ] Scaffold basic ui with mock data
 - [ ] Tidy up build process
 - [ ] Actually set up a database (vercel postgres)

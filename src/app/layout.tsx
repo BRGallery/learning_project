@@ -1,4 +1,5 @@
 import "~/styles/globals.css";
+import Link from "next/link";
 
 import { Inter } from "next/font/google";
 
@@ -13,6 +14,24 @@ export const metadata = {
   icons: [{ rel: "icon", url: "/favicon.ico" }],
 };
 
+function TopNav() {
+  return (
+    <nav className="flex items-center justify-between px-4 py-3 bg-gray-900 text-white shadow-md border-b">
+    <Link className="text-lg font-bold" href="#">
+      Bike Race Gallery
+    </Link>
+    <Link
+      className="inline-flex items-center justify-center px-4 py-2 text-sm font-medium rounded-md bg-gray-700 hover:bg-gray-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-500"
+      href="#"
+    >
+      Sign In
+    </Link>
+  </nav>
+  );
+}
+
+
+
 export default function RootLayout({
   children,
 }: {
@@ -20,7 +39,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={`font-sans ${inter.variable}`}>{children}</body>
+      <body className={`font-sans ${inter.variable} flex flex-col`}>
+        <TopNav />
+        {children}
+      </body>
     </html>
   );
 }
